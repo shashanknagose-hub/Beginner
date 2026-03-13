@@ -1,3 +1,8 @@
+/*
+    IMPORTANT: Replace the placeholder below with your Firebase project's config.
+    Create a Firebase project at https://console.firebase.google.com/, enable Realtime Database (in test mode for quick setup),
+    then paste the config here.
+*/
 const firebaseConfig = {
     apiKey: "YOUR_API_KEY",
     authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
@@ -7,6 +12,14 @@ const firebaseConfig = {
     messagingSenderId: "YOUR_SENDER_ID",
     appId: "YOUR_APP_ID"
 };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
 const db = firebase.database();
+
+// Helper: simple path references used across app
+const refs = {
+    signatures: db.ref('signatures'),
+    authorities: db.ref('authorities')
+};
