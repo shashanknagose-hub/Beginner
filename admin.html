@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizer Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+    <h2>Incoming Signatures</h2>
+    <div id="incoming-list"></div>
+
+    <div id="print-area" class="hidden">
+        --------------------------<br>
+        <b>EVENT INVITATION</b><br>
+        --------------------------<br>
+        <p>Authority:</p>
+        <h3 id="print-name" style="margin:5px 0;"></h3>
+        <p>Signature:</p>
+        <img id="print-sig" src="" alt="sig"><br>
+        Date: <span id="print-date"></span><br>
+        --------------------------
+    </div>
+
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
