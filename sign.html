@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/Beginner/style.css" />
         <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
         <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
@@ -20,7 +21,7 @@
                 <canvas id="signature-pad"></canvas>
                 <div class="controls">
                     <button class="btn-ghost" id="clearBtn">Clear</button>
-                    <button class="btn primary" id="submitBtn">Submit &amp; View Poster</button>
+                    <button class="btn primary" id="submitBtn">Submit &amp; </button>
                 </div>
             </section>
 
@@ -28,6 +29,7 @@
                 <h2>TECHKRUTI <span class="accent">2k26</span></h2>
                 <p class="muted">We proudly invite</p>
                 <h3 id="poster-name">Authority Name</h3>
+                <img id="poster-image" src="" alt="invitation poster" style="max-width:100%;display:block;margin:12px auto;" />
                 <img id="poster-sig" src="" alt="signature" />
                 <p class="muted">Guest of Honour · Venue: Auditorium · Date: 15 May 2026</p>
                 <div style="margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">

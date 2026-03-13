@@ -17,9 +17,13 @@ if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
 const db = firebase.database();
+const storage = firebase.storage();
 
 // Helper: simple path references used across app
 const refs = {
     signatures: db.ref('signatures'),
     authorities: db.ref('authorities')
 };
+
+// poster metadata (single node)
+refs.poster = db.ref('poster');

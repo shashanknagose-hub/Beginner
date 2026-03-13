@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/Beginner/style.css" />
         <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     </head>
     <body>
@@ -30,6 +31,20 @@ Prof Anita Verma"></textarea>
             <section style="margin-top:12px">
                 <h3>Authorities &amp; QR Codes</h3>
                 <div id="authoritiesList"></div>
+            </section>
+
+            <section style="margin-top:16px">
+                <h3>Invitation Poster (common for all)</h3>
+                <p class="muted">Upload a poster image that will be shown to every guest after signing.</p>
+                <input type="file" id="posterInput" accept="image/*" />
+                <div style="margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+                    <button id="uploadPoster" class="btn primary">Upload Poster</button>
+                    <button id="downloadPosterFile" class="btn outline hidden">Download Poster</button>
+                    <button id="deletePosterFile" class="btn btn-ghost hidden" style="border:1px solid #f5c6cb;color:#a71d2a">Delete Poster</button>
+                </div>
+                <div style="margin-top:12px">
+                    <img id="current-poster" src="" alt="current poster" style="max-width:320px;border-radius:8px;display:block;" />
+                </div>
             </section>
 
             <section style="margin-top:20px">
